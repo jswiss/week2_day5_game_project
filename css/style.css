@@ -48,6 +48,7 @@ footer {
   display: inline-block;
   width: 23.5%;
   height: 180px;
+  vertical-align: top;
 }
 
 .bottom-center {
@@ -60,6 +61,7 @@ footer {
   display: inline-block;
   width: 23.5%;
   height: 180px;
+  vertical-align: top;
 }
 
 .correct-words {
