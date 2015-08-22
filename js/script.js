@@ -63,4 +63,13 @@ typingGame.switchPlayers = function(){
 
 $(document).ready(function(){
   //add callback functions for event listeners here
+  $('.one-player').on('click' //function for one player)
+  $('.two-players').on('click' //function for one player)
+  $('.level-one').on('click' //function for one player)
+  $('.level-two').on('click' //function for one player)
+  $('.game-start').on('click' //function for one player)
+  $('.play-pause').on('click' //function for one player)
+  $('.restart').on('click' //function for one player)
 });
+
+

@@ -153,4 +153,10 @@ footer {
   height: 60px;
 }
 
+.game-start {
+  display: inline-block;
+  width: 150px;
+  height: 90px;
+}
+
 
