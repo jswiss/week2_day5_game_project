@@ -1,5 +1,8 @@
 div {
   border: 5px solid red;
+  font-family: 'AsimovRegular'; 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
 header {
@@ -120,6 +123,9 @@ footer {
   width: 600px;
   height: 350px;
   margin: 20px 30px 20px 50px;
+  font-family: 'CoelacanthCaptionRegular'; 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
 .level-player-select {
