@@ -5,8 +5,24 @@ typingGame.loremFactory = function(level, paragraphs){
   this.paragraphs = paragraphs;
 };
 
-typingGameLevel1 = new typingGame.loremFactory('Level 1', //arrays);
-typingGameLevel2 = new typingGame.loremFactory('Level 2', //arrays);
+typingGameLevel1 = new typingGame.loremFactory('Level 1', /*arrays*/);
+typingGameLevel2 = new typingGame.loremFactory('Level 2', /*arrays*/);
+
+typingGame.playerSelect = function(){
+  //selects one or two player game
+}
+
+typingGame.levelSelect = function(){
+  //selects level one or level two
+}
+
+typingGame.beginGame = function(){
+  //code to begin game and pause game
+}
+
+typingGame.restartGame = function(){
+  //code to restart game
+}
 
 typingGame.splitParagraphText = function(typingGame.loremFactory.paragraphs){
   //splits string into array of strings of words/spaces
