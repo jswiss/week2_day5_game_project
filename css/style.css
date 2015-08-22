@@ -122,9 +122,35 @@ footer {
   margin: 20px 30px 20px 50px;
 }
 
-.popup-box {
+.level-player-select {
   display: none;
+  position: relative;
+  width: 700px;
+  height: 400px;
 }
 
+.one-player {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+}
+
+.two-players {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+}
+
+.level-one {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+}
+
+.level-two {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+}
 
 
