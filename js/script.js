@@ -8,18 +8,24 @@
     this.paragraphs = paragraphs;
   };
 
-  typingGameLevel1 = new typingGame.loremFactory('Level 1', //put in split level1Paras);
-  typingGameLevel2 = new typingGame.loremFactory('Level 2', // put in split level2Paras);
+  typingGameLevel1 = new typingGame.loremFactory('Level 1', //put in splitParagraphText);
+  typingGameLevel2 = new typingGame.loremFactory('Level 2', // put in splitParagraphText);
 
   console.log(typingGameLevel1.paragraphs[2])
 
+typingGame.onLoadScreen = function(){
+  //on.load function, will need to include playerSelect and levelSelect here
+}
+
 typingGame.playerSelect = function(){
   //selects one or two player game
+  //how to transition to two players? just have it go to player 2 game at the end of the first round?
 }
 
 typingGame.levelSelect = function(){
   //selects level one or level two
   //randomly selects paragraph within those arrays
+  //this can probably be in the begin game function
 }
 
 typingGame.beginGame = function(){
@@ -32,7 +38,7 @@ typingGame.restartGame = function(){
 }
 
 typingGame.splitParagraphText = function(typingGame.loremFactory.paragraphs){
-
+  //do this next
 }
 
 typingGame.getCharacters = function(keyboard){
@@ -55,6 +61,7 @@ typingGame.updateScores = function(){
 
 typingGame.animatedEndOfGameBox = function(){
   //write a function to animate when the game is over
+  //need to add this box to html and css
 }
 
 typingGame.switchPlayers = function(){
@@ -67,7 +74,6 @@ $(document).ready(function(){
   $('.two-players').on('click' //function for one player)
   $('.level-one').on('click' //function for one player)
   $('.level-two').on('click' //function for one player)
-  $('.game-start').on('click' //function for one player)
   $('.play-pause').on('click' //function for one player)
   $('.restart').on('click' //function for one player)
 });
