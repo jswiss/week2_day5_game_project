@@ -53,6 +53,7 @@ typingGame.restartGame = function(){
 //code to restart game, not refresh, but re-run from level1/level2 select
 }
 
+//need to test for this
 typingGame.getCharacters = function(keyboard){
   var typedCharacterArray = [];
   document.onkeypress = function(event) {
