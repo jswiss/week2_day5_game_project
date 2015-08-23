@@ -62,9 +62,40 @@ typingGame.updateTypingHTML = function(){
 }
 
 typingGame.timer = function(){
-//create a timer
-//show it in the footer left box
-//use it to trigger typingGame.animatedEndOfGameBox
+  totalSeconds: 0.00,
+
+  start: function () {
+    var time = this;
+
+    this.interval = setInterval(function () {
+      time.totalSeconds += 1;
+
+        $("#min").text(Math.floor(time.totalSeconds / 60 % 60));
+        $("#sec").text(parseInt(time.totalSeconds % 60));
+        $("#mil").text(Math.floor(time.totalSeconds) % 100);
+      }, 10);
+    },
+
+    pause: function () {
+      clearInterval(this.interval);
+      delete this.interval;
+    },
+
+    resume: function () {
+      if (!this.interval) this.start();
+    }
+  };
+
+  timer.start();
+
+  $('#level-one, level-two').click(function () { 
+    this.setTimeout (function () {
+      timer.start(); });
+    }, 3000);
+  $('#resumeButton').click(function () { 
+    Clock.resume(); });
+
+
 }
 
 typingGame.updateScores = function(){
