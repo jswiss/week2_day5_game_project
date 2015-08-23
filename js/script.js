@@ -8,8 +8,11 @@ var level2ParaString = level2ParaArray.toString();
 level1ParaString = level1ParaString.split(" ");
 level2ParaString = level2ParaString.split(" ");
 
+var typedCharacterArray = [];
+
+
 var splittedParaArray1 = new Array();
-  for (var i = 0; i < level1ParaString.length; i++){
+  for (var i = 0; i < level1ParaString.length; i++) {
   splittedParaArray1.push(level1ParaString[i]);
   if (i !== level1ParaString.length - 1) {
     splittedParaArray1.push(" ");
@@ -17,14 +20,14 @@ var splittedParaArray1 = new Array();
 };
 
 var splittedParaArray2 = new Array();
-  for (var i = 0; i < level2ParaString.length; i++){
+  for (var i = 0; i < level2ParaString.length; i++) {
   splittedParaArray2.push(level2ParaString[i]);
   if (i !== level2ParaString.length - 1) {
     splittedParaArray2.push(" ");
   }
 };
 
-typingGame.loremFactory = function(level, paragraphs){
+typingGame.loremFactory = function(level, paragraphs) {
   this.level = level;
   this.paragraphs = paragraphs;
 };
@@ -34,32 +37,32 @@ typingGameLevel2 = new typingGame.loremFactory('Level 2', splittedParaArray2);
 
 console.log(level1ParaArray[2]);
 
-typingGame.playerSelect = function(){
+typingGame.playerSelect = function() {
 //selects one or two player game
 //how to transition to two players? just have it go to player 2 game at the end of the first round?
 }
 
-typingGame.levelSelect = function(){
+typingGame.levelSelect = function() {
 var level = $(this).attr('class') === 'level-one' ? $('text-display').html(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
 //need to change popup box to hide after this!
 };
 
-typingGame.beginGame = function(){
+typingGame.beginGame = function() {
 //code to begin game and pause game
 //sets timer
 }
 
-typingGame.restartGame = function(){
+typingGame.restartGame = function() {
 //code to restart game, not refresh, but re-run from level1/level2 select
 }
 
 //need to test for this
-typingGame.getCharacters = function(keyboard){
-  var typedCharacterArray = [];
+typingGame.getCharacters = function(keyboard) {
+  typedCharacterArray = [];
   document.onkeypress = function(event) {
     event = event || window.event;
 
-    var charCode = typeof evt.which == "number" ? evt.which : evt.keyCode;
+    var charCode = typeof event.which == "number" ? event.which : event.keyCode;
 
     if (charCode) {
         typedCharacterArray.push(String.fromCharCode(charCode));
@@ -67,11 +70,11 @@ typingGame.getCharacters = function(keyboard){
   };
 }  
 
-typingGame.updateTypingHTML = function(){
+typingGame.updateTypingHTML = function() {
 //compares typed letters to split paragraphs and returns either green with bold, or red with strikethrough
 }
 
-typingGame.timer = function(){
+typingGame.timer = function() {
   totalSeconds: 0.00,
 
   typingGame.timer.start = function () {
@@ -98,20 +101,20 @@ typingGame.timer = function(){
 
   // typingGame.timer.start();
 
-typingGame.updateScores = function(){
+typingGame.updateScores = function() {
 //update fields in footer left and popup box
 }
 
-typingGame.animatedEndOfGameBox = function(){
+typingGame.animatedEndOfGameBox = function() {
 //write a function to animate when the game is over
 //need to add this box to html and css
 }
 
-typingGame.switchPlayers = function(){
+typingGame.switchPlayers = function() {
 //switch from player one to player 2
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
 //add callback functions for event listeners here
 // $('.one-player, two-players').on('click', playerSelect);
 $('.level-one, level-two').on('click', typingGame.levelSelect);
@@ -123,6 +126,7 @@ $('#play-pause').click(function () {
     typingGame.timer.resume();
     typingGame.timer.pause()
   });
+typingGame.getCharacters();
 // $('.restart').on('click', restartGame);
 });
 
