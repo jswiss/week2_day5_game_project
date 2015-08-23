@@ -54,8 +54,17 @@ typingGame.restartGame = function(){
 }
 
 typingGame.getCharacters = function(keyboard){
-//gets typed characters
-}
+  var typedCharacterArray = [];
+  document.onkeypress = function(event) {
+    event = event || window.event;
+
+    var charCode = typeof evt.which == "number" ? evt.which : evt.keyCode;
+
+    if (charCode) {
+        typedCharacterArray.push(String.fromCharCode(charCode));
+    }
+  };
+}  
 
 typingGame.updateTypingHTML = function(){
 //compares typed letters to split paragraphs and returns either green with bold, or red with strikethrough
