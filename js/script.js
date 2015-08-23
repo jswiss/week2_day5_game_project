@@ -50,7 +50,7 @@ typingGame.beginGame = function(){
 }
 
 typingGame.restartGame = function(){
-//code to restart game
+//code to restart game, not refresh, but re-run from level1/level2 select
 }
 
 typingGame.getCharacters = function(keyboard){
@@ -58,7 +58,7 @@ typingGame.getCharacters = function(keyboard){
 }
 
 typingGame.updateTypingHTML = function(){
-//compares typed letters to split paragraphs
+//compares typed letters to split paragraphs and returns either green with bold, or red with strikethrough
 }
 
 typingGame.timer = function(){
@@ -86,10 +86,10 @@ typingGame.switchPlayers = function(){
 
 $(document).ready(function(){
 //add callback functions for event listeners here
-$('.one-player, two-players').on('click' //function for one player)
+$('.one-player, two-players').on('click', playerSelect);
 $('.level-one, level-two').on('click', typingGame.levelSelect);
 $('.play-pause').on('click', typingGame.playPause);
-$('.restart').on('click' //refresh, or begin board again?)
+$('.restart').on('click', restartGame);
 });
 
 
