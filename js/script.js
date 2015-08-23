@@ -23,10 +23,8 @@ typingGame.playerSelect = function(){
 }
 
 typingGame.levelSelect = function(){
-  //selects level one or level two
-  //randomly selects paragraph within those arrays
-  //this can probably be in the begin game function
-}
+  var level = $(this).attr('class') === 'level-one' ? $('text-display').html(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
+};
 
 typingGame.beginGame = function(){
   //code to begin game and pause game
@@ -72,8 +70,7 @@ $(document).ready(function(){
   //add callback functions for event listeners here
   $('.one-player').on('click' //function for one player)
   $('.two-players').on('click' //function for one player)
-  $('.level-one').on('click' //function for one player)
-  $('.level-two').on('click' //function for one player)
+  $('.level-one, level-two').on('click' typingGame.levelSelect);
   $('.play-pause').on('click' //function for one player)
   $('.restart').on('click' //function for one player)
 });
