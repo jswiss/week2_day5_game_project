@@ -5,8 +5,9 @@ var level2ParasArray = ['Twenty or thirty years ago my story was in great demand
 
 var level1ParasString = level1ParasArray.toString();
 var level2ParasString = level2ParasArray.toString();
-
 level1ParasString = level1ParasString.split(" ");
+level2ParasString = level2ParasString.split(" ");
+
 var splittedParasArray1 = new Array();
   for (var i = 0; i < level1ParasString.length; i++){
   splittedParasArray1.push(level1ParasString[i]);
@@ -15,7 +16,6 @@ var splittedParasArray1 = new Array();
   }
 };
 
-level2ParasString = level2ParasString.split(" ");
 var splittedParasArray2 = new Array();
   for (var i = 0; i < level2ParasString.length; i++){
   splittedParasArray2.push(level2ParasString[i]);
@@ -24,15 +24,13 @@ var splittedParasArray2 = new Array();
   }
 };
 
-
-
 typingGame.loremFactory = function(level, paragraphs){
   this.level = level;
   this.paragraphs = paragraphs;
 };
 
-typingGameLevel1 = new typingGame.loremFactory('Level 1', //put in splitParagraphText);
-typingGameLevel2 = new typingGame.loremFactory('Level 2', // put in splitParagraphText);
+typingGameLevel1 = new typingGame.loremFactory('Level 1', splittedParasArray1);
+typingGameLevel2 = new typingGame.loremFactory('Level 2', splittedParasArray2);
 
 console.log(typingGameLevel1.paragraphs[2])
 
