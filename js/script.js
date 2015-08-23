@@ -13,10 +13,6 @@
 
   console.log(typingGameLevel1.paragraphs[2])
 
-typingGame.onLoadScreen = function(){
-  //on.load function, will need to include playerSelect and levelSelect here
-}
-
 typingGame.playerSelect = function(){
   //selects one or two player game
   //how to transition to two players? just have it go to player 2 game at the end of the first round?
@@ -68,11 +64,10 @@ typingGame.switchPlayers = function(){
 
 $(document).ready(function(){
   //add callback functions for event listeners here
-  $('.one-player').on('click' //function for one player)
-  $('.two-players').on('click' //function for one player)
+  $('.one-player, two-players').on('click' //function for one player)
   $('.level-one, level-two').on('click' typingGame.levelSelect);
-  $('.play-pause').on('click' //function for one player)
-  $('.restart').on('click' //function for one player)
+  $('.play-pause').on('click' //should this be .toggle?)
+  $('.restart').on('click' //refresh, or begin board again?)
 });
 
 
