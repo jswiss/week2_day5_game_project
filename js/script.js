@@ -90,12 +90,12 @@ typingGame.timer = function(){
 
   $('#level-one, level-two').click(function () { 
     this.setTimeout (function () {
-      timer.start(); });
+      typingGame.timer.start(); });
     }, 3000);
-  $('#resumeButton').click(function () { 
-    Clock.resume(); });
-
-
+  $('#play-pause').click(function () { 
+    typingGame.timer.resume();
+    typingGame.timer.pause()
+  });
 }
 
 typingGame.updateScores = function(){
