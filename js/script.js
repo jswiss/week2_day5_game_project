@@ -32,7 +32,7 @@ typingGame.loremFactory = function(level, paragraphs){
 typingGameLevel1 = new typingGame.loremFactory('Level 1', splittedParaArray1);
 typingGameLevel2 = new typingGame.loremFactory('Level 2', splittedParaArray2);
 
-console.log(typingGameLevel1.paragraphs[2])
+console.log(level1ParaArray[2]);
 
 typingGame.playerSelect = function(){
 //selects one or two player game
@@ -64,7 +64,7 @@ typingGame.updateTypingHTML = function(){
 typingGame.timer = function(){
   totalSeconds: 0.00,
 
-  start: function () {
+  typingGame.timer.start = function () {
     var time = this;
 
     this.interval = setInterval(function () {
@@ -76,18 +76,17 @@ typingGame.timer = function(){
       }, 10);
     },
 
-    pause: function () {
+    typingGame.timer.pause =  function () {
       clearInterval(this.interval);
       delete this.interval;
     },
 
-    resume: function () {
+    typingGame.timer.resume = function () {
       if (!this.interval) this.start();
     }
   };
 
-  timer.start();
-}
+  // typingGame.timer.start();
 
 typingGame.updateScores = function(){
 //update fields in footer left and popup box
@@ -104,7 +103,7 @@ typingGame.switchPlayers = function(){
 
 $(document).ready(function(){
 //add callback functions for event listeners here
-$('.one-player, two-players').on('click', playerSelect);
+// $('.one-player, two-players').on('click', playerSelect);
 $('.level-one, level-two').on('click', typingGame.levelSelect);
 $('#level-one, level-two').click(function () { 
     this.setTimeout (function () {
@@ -114,7 +113,7 @@ $('#play-pause').click(function () {
     typingGame.timer.resume();
     typingGame.timer.pause()
   });
-$('.restart').on('click', restartGame);
+// $('.restart').on('click', restartGame);
 });
 
 
