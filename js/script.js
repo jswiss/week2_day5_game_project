@@ -87,15 +87,6 @@ typingGame.timer = function(){
   };
 
   timer.start();
-
-  $('#level-one, level-two').click(function () { 
-    this.setTimeout (function () {
-      typingGame.timer.start(); });
-    }, 3000);
-  $('#play-pause').click(function () { 
-    typingGame.timer.resume();
-    typingGame.timer.pause()
-  });
 }
 
 typingGame.updateScores = function(){
@@ -107,10 +98,6 @@ typingGame.animatedEndOfGameBox = function(){
 //need to add this box to html and css
 }
 
-typingGame.playPause = function(){
-//toggle between pausing and playing the game;
-}
-
 typingGame.switchPlayers = function(){
 //switch from player one to player 2
 }
@@ -119,7 +106,14 @@ $(document).ready(function(){
 //add callback functions for event listeners here
 $('.one-player, two-players').on('click', playerSelect);
 $('.level-one, level-two').on('click', typingGame.levelSelect);
-$('.play-pause').on('click', typingGame.playPause);
+$('#level-one, level-two').click(function () { 
+    this.setTimeout (function () {
+      typingGame.timer.start(); });
+    }, 3000);
+$('#play-pause').click(function () { 
+    typingGame.timer.resume();
+    typingGame.timer.pause()
+  });
 $('.restart').on('click', restartGame);
 });
 
