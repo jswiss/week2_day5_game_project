@@ -151,26 +151,26 @@ footer {
 
 .one-player {
   display: inline-block;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 35px;
 }
 
 .two-players {
   display: inline-block;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 35px;
 }
 
 .level-one {
   display: inline-block;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 35px;
 }
 
 .level-two {
   display: inline-block;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 35px;
 }
 
 .hidden {

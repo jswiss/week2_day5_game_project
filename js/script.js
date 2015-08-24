@@ -14,8 +14,8 @@ var level2ParaArray = ['Twenty or thirty years ago my story was in great demand.
 
 var level1ParaString = level1ParaArray.toString();
 var level2ParaString = level2ParaArray.toString();
-level1ParaString = level1ParaString.split(" ");
-level2ParaString = level2ParaString.split(" ");
+level1ParaString = level1ParaString.split("");
+level2ParaString = level2ParaString.split("");
 
 var typedCharacterArray = [];
 
@@ -23,7 +23,7 @@ var splittedParaArray1 = new Array();
   for (var i = 0; i < level1ParaString.length; i++) {
   splittedParaArray1.push(level1ParaString[i]);
   if (i !== level1ParaString.length - 1) {
-    splittedParaArray1.push(" ");
+    splittedParaArray1.push("");
   }
 };
 
@@ -31,7 +31,7 @@ var splittedParaArray2 = new Array();
   for (var i = 0; i < level2ParaString.length; i++) {
   splittedParaArray2.push(level2ParaString[i]);
   if (i !== level2ParaString.length - 1) {
-    splittedParaArray2.push(" ");
+    splittedParaArray2.push("");
   }
 };
 
@@ -80,7 +80,8 @@ typingGame.updateTypingHTML = function() {
 }
 
 typingGame.timer = function() {
-  totalSeconds: 0.00,
+  
+  typingGame.totalSeconds = 0.00;
 
   typingGame.timer.start = function () {
     var time = this;
@@ -125,12 +126,10 @@ $(document).ready(function() {
 $('.level-one, level-two').on('click', typingGame.levelSelect);
 var pop = function(){
     console.log(this);
-    $('#screen').css({'opacity': 0.7, 'width':100%,'height':150%;
+    $('#screen').css({'opacity': '0.7', 'width': '100%', 'height': '150%'});
     $('body').css({'overflow':'hidden'});
     $('#initial-box').css({'display': 'block'});
-})
-};
-
+}
 $('#level-one, level-two').click(function () { 
     this.setTimeout (function () {
       typingGame.timer.start(); });
