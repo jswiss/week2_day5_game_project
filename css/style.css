@@ -148,36 +148,22 @@ footer {
   height: 400px;
 }
 
-/*.one-player {
+.typing-input {
   display: inline-block;
-  width: 80px;
-  height: 35px;
+  width: 620px;
+  height: 150px;
+  margin: 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
 }
 
-.two-players {
-  display: inline-block;
-  width: 80px;
-  height: 35px;
-}
-
-.level-one {
-  display: inline-block;
-  width: 80px;
-  height: 35px;
-}
-
-.level-two {
-  display: inline-block;
-  width: 80px;
-  height: 35px;
-}*/
-
-/*.setup {
+.setup {
   display: inline;
+  font-family: 'Oswald', sans-serif;
   font-size: 14px;
   width: 80px;
   height: 35px;
-}*/
+}
 
 .scoreboard {
   font-family: 'Oswald', sans-serif;
