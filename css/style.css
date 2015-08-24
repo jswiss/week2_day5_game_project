@@ -168,7 +168,13 @@ footer {
 }
 
 .in-game-functions {
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 14px;
   font-weight: bold;
+  border: 2px solid black;
+}
+
+.player-typing {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
 }

@@ -154,7 +154,7 @@ $(document).ready(function() {
   typingGame.updateScores();
 
   $('.start').on('click', function () { 
-    console.log('timer')
+    $('.player-typing').removeAttr('disabled');
     typingGame.timeInterval(); 
   });
 
@@ -182,7 +182,7 @@ $(document).ready(function() {
     console.log('clear');
 
     $('.wpm').html('Words per minute: ' + (Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60))); //not working, needs fixed
-    $('accuracy').text()
+    // $('.accuracy').text()
     typingGame.stopInterval();
   });  
 }); // end doc ready
