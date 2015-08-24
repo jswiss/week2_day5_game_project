@@ -30,33 +30,6 @@ var splittedParaArray2 = new Array();
   }
 };
 
-// typingGame = {
-
-//   loremFactory: function(level, paragraphs){
-//     this.level = level;
-//     this.paragraphs = paragraphs;
-//   },
-
-//   levelSelect: function(){
-//     $(this).attr('class') === 'level-one' ? $('text-display').text(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
-//     //need to change popup box to hide after this!
-//   },
-
-//   totalSeconds = 0.00,
-
-//   timer: {
-
-//   },
-
-
-
-// }
-
-/***********************
-TIMER STUFF
-***************************/
-
-
 typingGame.loremFactory = function(level, paragraphs) {
   this.level = level;
   this.paragraphs = paragraphs;
@@ -101,6 +74,10 @@ typingGame.updateTypingHTML = function() {
     }
   }
 }
+
+/***********************
+TIMER STUFF
+***************************/
 
 // typingGame.timer = function() {
   
