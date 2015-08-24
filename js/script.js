@@ -85,7 +85,7 @@ typingGame.restartGame = function() {
 }
 
 typingGame.getCharacters = function(keyboard) {
-  
+  var typedChars = $('.player-typing').val();
   typedCharacterArray = []; //change to inputbox .val
   document.onkeypress = function(event) {
     event = event || window.event;
@@ -155,9 +155,9 @@ $(document).ready(function() {
   // }
   $('.level-one, .level-two').on('click', function () { 
     if ($(this).hasClass('level-one')) {
-      $('text-display').text(typingGameLevel1.paragraphs);     //[Math.floor(Math.random(typingGameLevel1.paragraphs.length))] 
+      $('.text-display').text(typingGameLevel1.paragraphs);     //[Math.floor(Math.random(typingGameLevel1.paragraphs.length))] 
     } else {
-      $('text-display').text(typingGameLevel2.paragraphs);     //[Math.floor(Math.random(typingGameLevel2.paragraphs.length))] 
+      $('.text-display').text(typingGameLevel2.paragraphs);     //[Math.floor(Math.random(typingGameLevel2.paragraphs.length))] 
     }
     console.log(this);
   });
