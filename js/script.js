@@ -53,8 +53,6 @@ typingGame.levelSelect = function() {
 //need to change popup box to hide after this!
 };
 
-  debugger;
-
 typingGame.beginGame = function() {
 //code to begin game and pause game
 //sets timer

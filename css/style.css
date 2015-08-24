@@ -1,8 +1,9 @@
-div {
-  border: 5px solid red;
+/*div {
+  border: 1px solid red;
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
-
+  display: inline-block;
+*/
 #initial-box {
   width: 400px;
   height: 300px;
@@ -171,14 +172,6 @@ footer {
   height: 35px;
 }*/
 
-.hidden {
-
-}
-
-.show {
-
-}
-
 /*.setup {
   display: inline;
   font-size: 14px;
@@ -186,3 +179,8 @@ footer {
   height: 35px;
 }*/
 
+.scoreboard {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
