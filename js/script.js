@@ -49,9 +49,11 @@ typingGame.playerSelect = function() {
 }
 
 typingGame.levelSelect = function() {
-var level = $(this).attr('class') === 'level-one' ? $('text-display').text(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
+    $(this).attr('class') === 'level-one' ? $('text-display').text(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
 //need to change popup box to hide after this!
 };
+
+  debugger;
 
 typingGame.beginGame = function() {
 //code to begin game and pause game
@@ -134,7 +136,7 @@ $('#level-one, level-two').click(function () {
     this.setTimeout (function () {
       typingGame.timer.start(); });
     }, 3000);
-    $('text-display').text(levelSelect());
+    $('text-display').text(typingGame.levelSelect());
 $('#play-pause').click(function () { 
     typingGame.timer.resume();
     typingGame.timer.pause()

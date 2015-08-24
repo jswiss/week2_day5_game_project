@@ -1,9 +1,7 @@
 div {
   border: 5px solid red;
-  font-family: 'AsimovRegular'; 
-  font-weight: normal; 
-  font-style: normal; 
-}
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
 
 #initial-box {
   width: 400px;
@@ -138,9 +136,8 @@ footer {
   width: 600px;
   height: 350px;
   margin: 20px 30px 20px 50px;
-  font-family: 'CoelacanthCaptionRegular'; 
-  font-weight: normal; 
-  font-style: normal; 
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
 }
 
 .level-player-select {
