@@ -105,10 +105,12 @@ typingGame.stopInterval = function() {
   clearInterval(timerId);
 };
 
+/*************************************
+UPDATING SCORES
+***************************************/  
+
 typingGame.updateScores = function() {
-  // var paraLength = $('text-display').val().length;
-  // $('.word-count').text('Character count: ' + level1ParaArray[0].length);
-  //update fields in footer left and popup box
+  
 }
 
 typingGame.animatedEndOfGameBox = function() {
@@ -170,7 +172,7 @@ $(document).ready(function() {
         } else {
           fail++;
           console.log('fail');
-          $(element).css('color', 'black');
+          $(element).css('color', 'black');  //maybe make it black until typed, red if mistyped, green if correct
         }
       });
     }
@@ -178,6 +180,8 @@ $(document).ready(function() {
 
   $('.submit').on('click', function() {
     console.log('clear');
+    $('wpm').text(((playerInput.length/5.1)/parseFloat($('#game-timer').html())/60));
+    
     typingGame.stopInterval();
   });  
 }); // end doc ready
