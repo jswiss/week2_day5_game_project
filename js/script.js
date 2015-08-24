@@ -17,6 +17,7 @@ var level2ParaString = level2ParaArray.toString();
 level1ParaString = level1ParaString.split("");
 level2ParaString = level2ParaString.split("");
 
+var typedChars = $('.player-typing').val();
 var typedCharacterArray = [];
 
 var splittedParaArray1 = new Array();
@@ -85,7 +86,6 @@ typingGame.restartGame = function() {
 }
 
 typingGame.getCharacters = function(keyboard) {
-  var typedChars = $('.player-typing').val();
   typedCharacterArray = []; //change to inputbox .val
   document.onkeypress = function(event) {
     event = event || window.event;
@@ -99,7 +99,13 @@ typingGame.getCharacters = function(keyboard) {
 }  
 
 typingGame.updateTypingHTML = function() {
-//compares typed letters to split paragraphs and returns either green with bold, or red with strikethrough
+  for(i = 0; i < typingGameLevel1.paragraphs.length; i++) { //need to switch between lengths
+    if (typedCharacterArray[i] = typingGameLevel1.paragraphs[i]) {
+      $('.text-display').css({'color': 'green'});
+    } else {
+      $('.text-display').css({'color': 'red'});
+    }
+  }
 }
 
 // typingGame.timer = function() {
@@ -155,9 +161,9 @@ $(document).ready(function() {
   // }
   $('.level-one, .level-two').on('click', function () { 
     if ($(this).hasClass('level-one')) {
-      $('.text-display').text(typingGameLevel1.paragraphs);     //[Math.floor(Math.random(typingGameLevel1.paragraphs.length))] 
+      $('.text-display').text(level1ParaArray[0]);     //[Math.floor(Math.random(typingGameLevel1.paragraphs.length))] 
     } else {
-      $('.text-display').text(typingGameLevel2.paragraphs);     //[Math.floor(Math.random(typingGameLevel2.paragraphs.length))] 
+      $('.text-display').text(level2ParaArray[0]);     //[Math.floor(Math.random(typingGameLevel2.paragraphs.length))] 
     }
     console.log(this);
   });
@@ -169,7 +175,7 @@ $(document).ready(function() {
 
   typingGame.getCharacters();
   // $('.restart').on('click', restartGame);
-
+  typingGame.updateTypingHTML();
 }); // end doc ready
 
 
