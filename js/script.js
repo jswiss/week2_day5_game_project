@@ -69,6 +69,17 @@ typingGame.getCharacters = function(keyboard) {
   };
 }  
 
+typingGame.storeInputSpan = function(event) {
+  var spannedInput = $('.player-typing').html().split(' '),
+      len = spannedInput.length,
+      result = []; 
+
+  for( var i = 0; i < len; i++ ) {
+      result[i] = '<span>' + spannedInput[i] + '</span>';
+  }
+  $(this).html(result.join(' '));
+}
+
 typingGame.updateTypingHTML = function() {
   for(i = 0; i < typingGameLevel1.paragraphs.length; i++) { //need to switch between lengths
     if (typedCharacterArray[i] === typingGameLevel1.paragraphs[i]) {
