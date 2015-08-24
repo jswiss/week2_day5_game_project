@@ -180,8 +180,9 @@ $(document).ready(function() {
 
   $('.submit').on('click', function() {
     console.log('clear');
-    $('wpm').text(((playerInput.length/5.1)/parseFloat($('#game-timer').html())/60));
-    
+
+    $('.wpm').html('Words per minute: ' + (Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60))); //not working, needs fixed
+    $('accuracy').text()
     typingGame.stopInterval();
   });  
 }); // end doc ready
