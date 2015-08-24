@@ -158,11 +158,13 @@ footer {
 }
 
 .setup {
-  display: inline;
+  display: inline-block;
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
   width: 80px;
   height: 35px;
+  margin: 10px 20px 10px 20px;
+  vertical-align: top;
 }
 
 .scoreboard {
@@ -175,4 +177,10 @@ footer {
   width: 600px;
   height: 120px;
   margin: 15px;
+}
+
+.in-game-functions {
+    font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
