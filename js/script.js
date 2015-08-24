@@ -76,23 +76,6 @@ typingGame.getCharacters = function(keyboard) {
   };
 }  
 
-typingGame.storeInputSpan = function(event) {
- $('.typing-input').on('input', function(event){
- })
-
- var playerInput = $('player-typing').split(' ');
- var spanSplit = $('.split-text').split(' ');
- for(var i = 0; i < playerInput.length; i++){
-  console.log($('.split-text'));
-  console.log(playerInput[i]);
-    if(playerInput[i] === spanSplit[i]) {
-      match++;
-    } else {
-      fail++;
-    }
- }
-};
-
 typingGame.updateTypingHTML = function() {
   for(i = 0; i < typingGameLevel1.paragraphs.length; i++) { //need to switch between lengths
     if (typedCharacterArray[i] === typingGameLevel1.paragraphs[i]) {
@@ -171,7 +154,26 @@ $(document).ready(function() {
   $('.start').on('click', function () { 
     console.log('timer')
     typingGame.timeInterval(); 
-    typingGame.storeInputSpan();
+  });
+
+  $('.typing-input').on('keypress', function(event){
+    if (event.keyCode === 32) {
+      playerInput = $('.player-typing').val();
+      var playerInputArray = [];
+      playerInputArray = playerInput.split(' ');
+      var spanSplit = $('.split-text');
+      $.each(spanSplit, function(index, element){
+        if(playerInputArray[index] === $(element).text()) {
+          console.log('match');
+          match++;
+          $(element).css('color', 'red');
+        } else {
+          fail++;
+          console.log('fail');
+          $(element).css('color', 'black');
+        }
+      });
+    }
   });
 
   $('.submit').on('click', function() {
