@@ -87,36 +87,13 @@ typingGame.updateTime = function() {
 }
 
 typingGame.timeInterval = function() {
-  setInterval(typingGame.updateTime, 1000);
+  return setInterval(typingGame.updateTime, 1000);
 }
 
-// typingGame.timer = function() {
-  
-//   typingGame.totalSeconds = 0.00;
-
-//   typingGame.timer.start = function () {
-//     var time = this;
-
-//     this.interval = setInterval(function () {
-//       time.totalSeconds += 1;
-
-//       $("#min").text(Math.floor(time.totalSeconds / 60 % 60));
-//       $("#sec").text(parseInt(time.totalSeconds % 60));
-//       $("#mil").text(Math.floor(time.totalSeconds) % 100);
-//     }, 10);
-//   },
-
-//   typingGame.timer.pause =  function () {
-//     clearInterval(this.interval);
-//     delete this.interval;
-//   },
-
-//   typingGame.timer.resume = function () {
-//     if (!this.interval) this.start();
-//   }
-// };
-
-  // typingGame.timer.start();
+typingGame.stopInterval = function() {
+  clearInterval(typingGame.updateTime);
+  clearInterval(typingGame.timeInterval);
+};
 
 typingGame.updateScores = function() {
   // var paraLength = $('text-display').val().length;
@@ -151,7 +128,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#play-pause').click(function () { 
+  $('#play-pause').on('click', function () { 
       typingGame.timer.resume();
       typingGame.timer.pause()
   });
@@ -161,10 +138,16 @@ $(document).ready(function() {
   typingGame.updateTypingHTML();
   typingGame.updateScores();
 
-  $('.start').on ('click', function () { 
-    console.log('is this working?')
-    typingGame.timeInterval();  
+  $('.start').on('click', function () { 
+    console.log('timer')
+    typingGame.timeInterval(); 
+    typingGame.stopInterval(); 
   });
+
+  $('.submit').on('click', function() {
+    console.log('clear');
+    typingGame.stopInterval();
+  });  
 }); // end doc ready
 
 

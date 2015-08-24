@@ -66,6 +66,7 @@ footer {
   width: 23.5%;
   height: 180px;
   vertical-align: top;
+  padding: 10px;
 }
 
 .bottom-center {
@@ -162,9 +163,10 @@ footer {
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
   width: 80px;
-  height: 35px;
-  margin: 10px 20px 10px 20px;
-  vertical-align: top;
+  height: 28px;
+  margin: 10px 20px 50px 20px;
+  border: 2px solid black;
+  text-align: center;
 }
 
 .scoreboard {
