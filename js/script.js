@@ -49,7 +49,7 @@ typingGame.playerSelect = function() {
 }
 
 typingGame.levelSelect = function() {
-var level = $(this).attr('class') === 'level-one' ? $('text-display').html(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
+var level = $(this).attr('class') === 'level-one' ? $('text-display').text(typingGameLevel1.paragraphs[Math.floor(Math.random(typingGameLevel1.paragraphs.length))]) : $('text-display').html(typingGameLevel2.paragraphs[Math.floor(Math.random(typingGameLevel2.paragraphs.length))]);
 //need to change popup box to hide after this!
 };
 
@@ -134,6 +134,7 @@ $('#level-one, level-two').click(function () {
     this.setTimeout (function () {
       typingGame.timer.start(); });
     }, 3000);
+    $('text-display').text(levelSelect());
 $('#play-pause').click(function () { 
     typingGame.timer.resume();
     typingGame.timer.pause()
