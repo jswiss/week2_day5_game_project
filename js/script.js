@@ -160,7 +160,11 @@ $(document).ready(function() {
   // $('.restart').on('click', restartGame);
   typingGame.updateTypingHTML();
   typingGame.updateScores();
-  typingGame.timeInterval();
+
+  $('.start').on ('click', function () { 
+    console.log('is this working?')
+    typingGame.timeInterval();  
+  });
 }); // end doc ready
 
 
