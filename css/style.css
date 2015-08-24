@@ -66,7 +66,7 @@ footer {
   width: 23.5%;
   height: 180px;
   vertical-align: top;
-  padding: 10px;
+  padding: 15px;
 }
 
 .bottom-center {
@@ -82,14 +82,14 @@ footer {
   vertical-align: top;
 }
 
-.correct-words {
+.wpm {
   display: block;
   width: 200px;
   height: 20px;
   margin: 0 5px 5px 15px;
 }
 
-.percent-correct {
+.accuracy {
   display: block;
   width: 200px;
   height: 20px;
@@ -103,20 +103,6 @@ footer {
   height: 20px;
   margin: 5px 5px 5px 15px;
 
-}
-
-.words-per-minute {
-  display: block;
-  width: 200px;
-  height: 20px;
-  margin: 5px 5px 5px 15px;
-}
-
-.word-count {
-  display: block;
-  width: 200px;
-  height: 20px;
-  margin: 5px 5px 5px 15px;
 }
 
 .play-pause {
