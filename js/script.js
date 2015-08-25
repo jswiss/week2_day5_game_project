@@ -128,6 +128,13 @@ soundManager.setup({
 });
 
 //plays sound, randomly generating new clip with each click
+typingGame.typing = function() {
+  var mySound = soundManager.createSound({
+  url: 'sounds/smith-corona.mp3',
+  id: 'typing'
+  });
+  mySound.play();
+};
 typingGame.ding = function() {
   var mySound = soundManager.createSound({
   url: 'sounds/return-ding.mp3',
@@ -141,6 +148,10 @@ EVENT LISTENERS
 *****************************/
 
 $(document).ready(function() {
+
+  $('.disablecopypaste').bind('copy paste', function (e) {
+       e.preventDefault();
+    });
 
   $('.level-one, .level-two').on('click', function () { 
     if ($(this).hasClass('level-one')) {
@@ -159,11 +170,12 @@ $(document).ready(function() {
       }
       $(this).html(result.join(' '));
       });
-    $('#screen').css('display', 'none');
-    $('#initial-box').css('display', 'none');
+    $('#screen').fadeOut(4000);
+    typingGame.typing();
+    $('#initial-box').fadeOut(2000);
     $('.player-typing').removeAttr('disabled');
     $('.player-typing').focus();
-    setTimeout(typingGame.timeInterval, 3000) 
+    setTimeout(typingGame.timeInterval, 3500) 
   });
 
   typingGame.getCharacters();
