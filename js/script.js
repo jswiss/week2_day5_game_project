@@ -137,16 +137,13 @@ $(document).ready(function() {
         len = spannedText.length,
         result = []; 
 
-    for( var i = 0; i < len; i++ ) {
+      for( var i = 0; i < len; i++ ) {
         result[i] = '<span class = "split-text">' + spannedText[i] + '</span>';
-    }
-    $(this).html(result.join(' '));
-}); 
-  });
-
-  $('#play-pause').on('click', function () { 
-      typingGame.timer.resume();
-      typingGame.timer.pause()
+      }
+      $(this).html(result.join(' '));
+      });
+    $('#screen').css('display', 'none');
+    $('#initial-box').css('display', 'none');
   });
 
   typingGame.getCharacters();
