@@ -168,7 +168,7 @@ footer {
 }
 
 .box-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Special Elite', cursive;
   letter-spacing: 1.3px;
 }
 
@@ -189,9 +189,9 @@ h1 {
 }
 
 .score-message {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Special Elite', cursive;
   letter-spacing: 1.3px;
-  font-size: 24px;
+  font-size: 28px;
   margin: 20px 20px 0 20px;
   text-align: center;
 }
