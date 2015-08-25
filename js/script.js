@@ -150,7 +150,11 @@ $(document).ready(function() {
   });
 
   typingGame.getCharacters();
-  // $('.restart').on('click', restartGame);
+
+  $('.restart').on('click', function(){
+    location.reload();
+  });
+
   typingGame.updateTypingHTML();
   typingGame.updateScores();
 
@@ -173,7 +177,7 @@ $(document).ready(function() {
         } else {
           fail++;
           console.log('fail');
-          $(element).css('color', 'black');  //maybe make it black until typed, red if mistyped, green if correct
+          $(element).css('color', 'black'); 
         }
       });
     }
