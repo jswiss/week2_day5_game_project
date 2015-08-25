@@ -16,6 +16,14 @@
     <div class="setup level-one">Easy</div>
     <div class="setup level-two">Hard</div>
   </div>
+  <div id="score-box">
+    <h2 class="score-message"></h2>
+    <div class="scoreboard wpm">Speed (wpm): wpm</div>
+<!--      <div class="scoreboard accuracy">Accuracy: % correct</div>--> 
+      <div class="scoreboard timer">Total time (sec):
+        <span id="game-timer"></span>
+      </div>
+  </div>
   <header id="header" class="main-header"></header>
   <div class="main-body">
     <div class="main-left"></div>
@@ -26,13 +34,7 @@
     </div>
   </div>
   <footer class="main-footer">
-    <div class="bottom-left">
-      <div class="scoreboard wpm">Speed: wpm</div>
-<!--       <div class="scoreboard accuracy">Accuracy: % correct</div>
- -->      <div class="scoreboard timer">Timer:
-        <span id="game-timer"></span>
-      </div>
-    </div>
+    <div class="bottom-left"></div>
     <div class="bottom-center">
       <div class="typing-input">
         <textarea name="typing-area" class ="player-typing" disabled="disabled"></textarea></div>
