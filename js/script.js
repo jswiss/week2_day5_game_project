@@ -145,6 +145,7 @@ $(document).ready(function() {
     $('#screen').css('display', 'none');
     $('#initial-box').css('display', 'none');
     $('.player-typing').removeAttr('disabled');
+    $('.player-typing').focus();
     typingGame.timeInterval(); 
   });
 
