@@ -105,20 +105,15 @@ footer {
 
 }
 
-/*.restart {
-  display: block;
-  width: 80px;
-  height: 35px;
-  margin: 0 15px 5px 230px;
-}*/
-
 .text-display {
   display: inline-block;
   width: 600px;
   height: 350px;
-  margin: 20px 30px 20px 50px;
+  margin: 20px 30px 40px 60px;
   font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .level-player-select {
@@ -135,6 +130,7 @@ footer {
   margin: 15px;
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
+  letter-spacing: 2px;
 }
 
 .setup {
