@@ -88,7 +88,6 @@ TIMER STUFF
 ***************************/
 
 typingGame.updateTime = function() {
-  console.log('updateTime')
   time++;
   $('#game-timer').text(time);
 }
@@ -120,6 +119,24 @@ typingGame.switchPlayers = function() {
 }
 
 /*****************************
+SOUND MANAGER
+******************************/
+soundManager.setup({
+  url: '/swf/',
+  onready: function() {
+  }
+});
+
+//plays sound, randomly generating new clip with each click
+typingGame.ding = function() {
+  var mySound = soundManager.createSound({
+  url: 'sounds/return-ding.mp3',
+  id: 'ding!'
+  });
+  mySound.play();
+};
+
+/*****************************
 EVENT LISTENERS
 *****************************/
 
@@ -146,7 +163,7 @@ $(document).ready(function() {
     $('#initial-box').css('display', 'none');
     $('.player-typing').removeAttr('disabled');
     $('.player-typing').focus();
-    typingGame.timeInterval(); 
+    setTimeout(typingGame.timeInterval, 3000) 
   });
 
   typingGame.getCharacters();
@@ -196,8 +213,8 @@ $(document).ready(function() {
     } else {
       $('.score-message').html("Not bad, but you can surely do better. Keep trying for a quicker score!");
     };
-
-
+    debugger;
+    typingGame.ding();
   });  
 }); // end doc ready
 

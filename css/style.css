@@ -91,7 +91,7 @@ footer {
   display: block;
   width: 200px;
   height: 20px;
-  margin: 60px 5px 5px 30px;
+  margin: 22px 5px 5px 30px;
 }
 
 .timer {
@@ -191,7 +191,7 @@ h1 {
 .score-message {
   font-family: 'Special Elite', cursive;
   letter-spacing: 1.3px;
-  font-size: 28px;
+  font-size: 32px;
   margin: 20px 20px 0 20px;
   text-align: center;
 }
