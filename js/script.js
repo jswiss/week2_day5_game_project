@@ -182,9 +182,17 @@ $(document).ready(function() {
     console.log('clear');
     $('#screen').css('display', 'inline-block');
     $('#score-box').css('display', 'inline-block');
-    $('.wpm').html('Words per minute: ' + (Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60))); //not working, needs fixed
+    $('.wpm').html('Words per minute: ' + (Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60))); 
     // $('.accuracy').text()
     typingGame.stopInterval();
+    if((Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60)) > 60) {
+      $('.score-message').html("Great job! You've clearly been practicing, as you're a quick typer!");
+    } else if ((Math.round((playerInput.length/5.1)/parseFloat($('#game-timer').html())*60)) < 30) {
+      $('.score-message').html("Not the quickest, are you? Keep at it and you'll get better!");
+    } else {
+      $('.score-message').html("Not bad, but you can surely do better. Keep trying for a quicker score!");
+    };
+
 
   });  
 }); // end doc ready
