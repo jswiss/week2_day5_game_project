@@ -225,7 +225,6 @@ $(document).ready(function() {
     } else {
       $('.score-message').html("Not bad, but you can surely do better. Keep trying for a quicker score!");
     };
-    debugger;
     typingGame.ding();
   });  
 }); // end doc ready
