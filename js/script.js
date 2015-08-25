@@ -153,6 +153,10 @@ $(document).ready(function() {
 
   $('.restart').on('click', function(){
     location.reload();
+  });  
+
+  $('.play-again').on('click', function(){
+    location.reload();
   });
 
   typingGame.updateTypingHTML();

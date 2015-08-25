@@ -91,7 +91,7 @@ footer {
   display: block;
   width: 200px;
   height: 20px;
-  margin: 100px 5px 5px 30px;
+  margin: 60px 5px 5px 30px;
 }
 
 .timer {
@@ -194,4 +194,17 @@ h1 {
   font-size: 24px;
   margin: 20px 20px 0 20px;
   text-align: center;
+}
+
+.play-again {
+  margin: 12px 5px 5px 30px;
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  text-align: center;
+  width: 80px;
+  height: 28px;
+
 }
