@@ -144,6 +144,8 @@ $(document).ready(function() {
       });
     $('#screen').css('display', 'none');
     $('#initial-box').css('display', 'none');
+    $('.player-typing').removeAttr('disabled');
+    typingGame.timeInterval(); 
   });
 
   typingGame.getCharacters();
@@ -154,11 +156,6 @@ $(document).ready(function() {
 
   typingGame.updateTypingHTML();
   typingGame.updateScores();
-
-  $('.start').on('click', function () { 
-    $('.player-typing').removeAttr('disabled');
-    typingGame.timeInterval(); 
-  });
 
   $('.typing-input').on('keypress', function(event){
     if (event.keyCode === 32) {
