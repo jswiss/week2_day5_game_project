@@ -105,19 +105,12 @@ footer {
 
 }
 
-.play-pause {
+/*.restart {
   display: block;
   width: 80px;
   height: 35px;
   margin: 0 15px 5px 230px;
-}
-
-.restart {
-  display: block;
-  width: 80px;
-  height: 35px;
-  margin: 0 15px 5px 230px;
-}
+}*/
 
 .text-display {
   display: inline-block;
@@ -168,11 +161,15 @@ footer {
 }
 
 .in-game-functions {
+  display: inline-block;
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
   font-weight: bold;
   border: 2px solid black;
   text-align: center;
+  margin-left: 440px;
+  width: 80px;
+  height: 28px;
 }
 
 .player-typing {
