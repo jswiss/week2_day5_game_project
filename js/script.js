@@ -54,7 +54,7 @@ typingGame.getCharacters = function(keyboard) {
   document.onkeypress = function(event) {
     event = event || window.event;
 
-    var charCode = typeof event.which == "number" ? event.which : event.keyCode;
+    var charCode = typeof event.which === "number" ? event.which : event.keyCode;
 
     if (charCode) {
         typedCharacterArray.push(String.fromCharCode(charCode));
@@ -145,7 +145,7 @@ $(document).ready(function() {
   $('.level-one, .level-two').on('click', function () { 
     if ($(this).hasClass('level-one')) {
       $('.text-display').html(level1ParaArray[Math.ceil(Math.random()*level1ParaArray.length)]);
-      $('.text-display').html  //not selecting at random   
+      $('.text-display').html    
     } else {
       $('.text-display').html(level2ParaArray[Math.ceil(Math.random()*level2ParaArray.length)]);     
     }
